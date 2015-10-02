@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block page_title %}Yeni Haber{% endblock %}
+{% block content %}
+<form class="form-horizontal" method="post" action="">
+{% csrf_token %}
+<fieldset>
+<!-- Form Name -->
+<legend>Haber Ekle</legend>
+<input id="haberid" value="{{hbr.id}}" type="hidden">
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_baslik">Başlık : </label>  
+  <div class="col-md-4">
+  <input id="hbr_baslik" name="hbr_baslik" value="{{ hbr.baslik }}" type="text" placeholder="Haberin Ana Başlığını Giriniz." class="form-control input-md" required="">
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_kategori">Kategori :</label>
+  <div class="col-md-4">
+    <select id="hbr_kategori" name="hbr_kategori" class="form-control">
+      {% for hbrkat in haber_kategori %}
+        <option value='{{ hbrkat.id }}'>{{ hbrkat.kategori_adi }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Ön Yazı :</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="hbr_onyazi" value="{{ hbr.onyazi }}" name="hbr_onyazi">Haberin ana sayfadaki görüntülenecek yazısını giriniz.</textarea>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_yazi">Ana Yazı :</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="hbr_yazi" value="{{ hbr.anayazi }}" name="hbr_yazi">Haberin tüm metnini giriniz.</textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_video">Vidyo URL : </label>  
+  <div class="col-md-4">
+  <input id="hbr_video" name="hbr_video" type="text" value="{{ hbr.vidyo_url }}" placeholder="URL" class="form-control input-md">
+  <span class="help-block">http://...</span>  
+  </div>
+</div>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 1:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim1" name="hbr_resim1" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 2:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim2" name="hbr_resim2" class="input-file" type="file">
+  </div>
+</div>
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 3:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim3" name="hbr_resim3" class="input-file" type="file">
+  </div>
+</div>
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 4:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim4" name="hbr_resim4" class="input-file" type="file">
+  </div>
+</div>
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 5:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim5" name="hbr_resim5" class="input-file" type="file">
+  </div>
+</div>
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="hbr_resim1">Resim 6:</label>
+  <div class="col-md-4">
+    <input id="hbr_resim6" name="hbr_resim6" class="input-file" type="file">
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Haberi Kaydet</label>
+  <div class="col-md-4">
+    <button id="hbr_onayla" name="hbr_onayla" class="btn btn-primary">Onayla</button>
+  </div>
+</div>
+</fieldset>
+</form>
+
+
+{% endblock %}

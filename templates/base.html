@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="tr">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block page_title %}{% endblock %}</title>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static 'yonetim/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'yonetim/js/bootstrap.min.js' %}"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'yonetim/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'yonetim/css/simple-sidebar.css' %}" rel="stylesheet">
+
+    {% block scripts %}{% endblock %}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Tellioğlu Vakfi
+                    </a>
+                </li>
+                <li>
+                    <a href="/yonetim">Ana Sayfa</a>
+                </li>
+                <li>
+                    <a href="haberler.html">Haberler</a>
+                </li>
+                <li>
+                    <a href="haberekle.html">Haber Ekle</a>
+                </li>
+                <li>
+                    <a href="#">Foto Galeri</a>
+                </li>
+                <li>
+                    <a href="#">Uyeler</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+
+</body>
+
+</html>
