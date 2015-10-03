@@ -7,4 +7,5 @@ urlpatterns = patterns(
 	url(r'^haberekle', views.haber_ekle, name='haber_ekle'),
 	url(r'^haberler', views.haberler, name='haberler'),
 	url(r'^resimgaleri',views.resimgaleri,name='galeri'),
+	url(r'^kategoriler',views.kategori,name='kategoriler'),
 )
