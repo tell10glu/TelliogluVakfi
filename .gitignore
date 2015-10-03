@@ -1,0 +1,95 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.python-version
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# Local settings
+settings_local.py
+
+# bower
+bower_components
+
+# gulp
+node_modules/
+assets/*/css/main.css
+assets/www2.otel.com/js/bundle.js
+assets/www2.otel.com/js/mobile/bundle.js
+assets/www2.otel.com/css/
+assets/www2.otel.com/font/
+assets/*/img/sprite.png
+
+# geoip databases
+geoip
+
+# redis
+dump.rdb
+
+# polar
+static
+media
+locale
+geoip
+
+# macosx
+*.DS_Store
+
+assets/*/CACHE
+
+.idea/
+
+celerybeat-schedule
+celerybeat.pid
+
+# vim
+*.swp
+*.un~
+#docs
+docs/_build
+docs/_static
+docs/_template
+
+.tern-project
+.tern-port
+TAGS
+.venv
